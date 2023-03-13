@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+   <h:head>
+       <title> lab 10</title>
+   </h:head>
+    <h:body>
+        <h1>lab 10</h1>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="A:" for="a"/>
+            <h:inputText value="#{logic.a}" id="a"/>
+                <h:outputLabel value="Begin:" for="begin"/>
+            <h:inputText value="#{logic.begin}" id="begin"/>
+                <h:outputLabel value="End:" for="end"/>
+            <h:inputText value="#{logic.end}" id="end"/>
+                <h:outputLabel value="H:" for="h"/>
+            <h:inputText value="#{logic.step}" id="h"/>
+            <h:commandButton value=" result" action="#{logic.show()}"/>
+
+            </h:panelGrid>
+            <h:panelGrid columns="2">
+                <h:outputText value="maximum Y:"/>
+                <h:outputText id="maxYNumber" value="#{logic.valueMaxYNumber}"/>
+                <h:outputText value="maximum Y index :"/>
+                <h:outputText id="maxYIndex" value="#{logic.valueMaxYIndex}"/>
+                <h:outputText value="maximum X:"/>
+                <h:outputText id="maxXNumber" value="#{logic.valueMaxXNumber}"/>
+                <h:outputText value="minimum Y:"/>
+                <h:outputText id="minYNumber" value="#{logic.valueMinYNumber}"/>
+                <h:outputText value="minimum Y index :"/>
+                <h:outputText id="minYIndex" value="#{logic.valueMinYIndex}"/>
+                <h:outputText value="minimum X:"/>
+                <h:outputText id="minXNumber" value="#{logic.valueMinXNumber}"/>
+                <h:outputText value="sum :"/>
+                <h:outputText id="sum" value="#{logic.sum}"/>
+                <h:outputText value="average :"/>
+                <h:outputText id="average" value="#{logic.average}"/>
+            </h:panelGrid>
+        </h:form>
+
+    </h:body>
+</f:view>
+</html>
